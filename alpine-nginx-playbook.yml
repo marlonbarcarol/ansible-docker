@@ -1,0 +1,23 @@
+---
+- hosts: webserver_docker
+  tasks:
+  - name: Print all available facts
+    debug:
+      var: ansible_facts
+  - name: Installing nginx
+    apk:
+      name: nginx
+      state: latest
+      update_cache: yes
+  - name: Copying custom index.html
+    template:
+      src: index.html.j2
+      dest: /var/lib/nginx/html/index.html
+  - name: Copying nginx.conf
+    copy:
+      src: nginx.conf
+      dest: /etc/nginx/http.d/default.conf
+    notify: Start nginx
+  handlers:
+  - name: Start nginx
+    shell: nginx

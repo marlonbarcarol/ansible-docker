@@ -1,0 +1,6 @@
+
+[webserver_docker]
+docker.domain
+
+[webserver_aws]
+ec2-user@webserver01
