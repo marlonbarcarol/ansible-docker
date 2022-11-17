@@ -40,4 +40,5 @@ make
 
 ## Makefile
 
-The Makefile is used as a place to store commands, so it is easier to remember when coming back. Please use it as a reference. 
+The Makefile is used as a place to store commands, so it is easier to remember when coming back. Please use it as a reference.
+e.g. `make docker.build docker.run ansible.ping`
