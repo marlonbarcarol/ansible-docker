@@ -1,6 +1,6 @@
 
 [webserver_docker]
-docker.domain
+localhost ansible_port=2222 ansible_ssh_user=root
 
 [webserver_aws]
 ec2-user@webserver01
